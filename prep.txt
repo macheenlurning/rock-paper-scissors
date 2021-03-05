@@ -1,0 +1,55 @@
+1) Create function "computerPlay" that randomly returns number. 
+Associate the number with either 'Rock' 'Paper' or 'Scissors'.
+
+function computerPlay() {
+    let enemyTurn = math.floor(Math.random(0, 2)) {
+        if enemyTurn === 0, console.log("Rock")
+    }
+        else if {enemyTurn === 1, console.log("Scissors")
+    }
+        else {console.log("Paper")}
+}
+
+2) write a function that plays a single round of RPS:
+    - Two parameters - playerSelection and computerSelection
+    - Returns a string that declares the winner: "You Lose! Paper beats Rock" 
+    - Make your function case insensitive for user input for any variation
+
+function oneRound:
+    playerSelection:
+        let playerSelection = (case insensitive) input form ("rock", "paper", "scissors")
+    computerSelection:
+        - calls the function computerPlay
+    Compares playerSelection to computerSelection
+        - if playerSelection === "Rock" && computerSelection === "Scissors"
+            - print "You WIN! Rock beats Scissors."
+        - if playerSelection === "Paper" && computerSelection === "Rock"
+            - print "You WIN! Paper beats Rock."
+        - if PlayerSelection === "Scissors" && computerSelection === "Paper"
+            - print "You WIN! Scissors beats Paper."
+        - if playerSelection === "Rock" && computerSelection === "Paper"
+            - print "You LOSE! Paper beats your Rock."
+        - if playerSelection === "Paper" && computerSelection === "Scissors"
+            - print "You LOSE! Scissors beats your Paper."
+        - if playerSelection === "Scissors" && computerSelection === "Rock"
+            - print "You LOSE! Rock beats your Scissors."
+        - if playerSelection === computerSelection
+            - print "It's a TIE!"
+
+
+
+    // important note: you want to return the results of this function call
+    // NOT console.log() them. to test this function console.log the results:
+
+
+    // write a NEW function called game(). use the previous function inside
+    // this one to play a 5 round game that keeps score and reports a winner or
+    // loser at the end. -- Use loops, and at this point use console.log to 
+    // display the results of each round and the winner at the end.
+
+    // use prompt() to get input from the user
+
+    // feel free to re-work your previous functions if you need to. specifically
+    // you might want to change the return value to something more useful.
+
+    // feel free to create more "helper" functions if you think it would be useful
