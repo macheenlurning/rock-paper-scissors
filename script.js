@@ -1,34 +1,33 @@
 function computerPlay() {
-    let x = math.floor(Math.random(0, 2))} { 
-    if (x === 0) {
-        let result = "Rock"
-    }   else if (x === 1) {
-        let result = "Paper" 
-    }   else (x === 2)  {
-        let result = "Scissors" 
+  let x = Math.floor(Math.random() * 3);
+  if (x = 0) {
+    let result = "rock"
+    } else if (x = 1) {
+    let result = "paper" 
+    } else {
+    let result = "scissors" 
     }
-    return result
-}
+  return result
+  }
 
-function oneRound():
-    let playerSelection: (case insensitive) input form ("rock", "paper", "scissors")
+
+function playRound(playerSelection, computerSelection):
+    let playerSelection: upper.(input form ("rock", "paper", "scissors")
 
     let computerSelection:
-        - calls the function computerPlay
-    
-        let results = 
-            if playerSelection === "Rock" && computerSelection === "Scissors"
-                alert("You WIN! Rock beats Scissors.");
-            else if playerSelection === "Paper" && computerSelection === "Rock"
-                alert("You WIN! Paper beats Rock.");
-            else if PlayerSelection === "Scissors" && computerSelection === "Paper"
-                alert("You WIN! Scissors beats Paper.");
-            else if playerSelection === "Rock" && computerSelection === "Paper"
-                alert("You LOSE! Paper beats your Rock.");
-            else if playerSelection === "Paper" && computerSelection === "Scissors"
-                alert("You LOSE! Scissors beats your Paper.");
-            else if playerSelection === "Scissors" && computerSelection === "Rock"
-                alert("You LOSE! Rock beats your Scissors.");
+        - calls the function computerPlay 
+        if playerSelection = "rock" && computerSelection === "scissors"
+                return("You WIN! Rock beats Scissors.");
+            else if playerSelection === "paper" && computerSelection === "rock"
+                return("You WIN! Paper beats Rock.");
+            else if PlayerSelection === "scissors" && computerSelection === "paper"
+                return("You WIN! Scissors beats Paper.");
+            else if playerSelection === "rock" && computerSelection === "paper"
+                return("You LOSE! Paper beats your Rock.");
+            else if playerSelection === "paper" && computerSelection === "scissors"
+                return("You LOSE! Scissors beats your Paper.");
+            else if playerSelection === "scissors" && computerSelection === "rock"
+                return("You LOSE! Rock beats your Scissors.");
             else playerSelection === computerSelection
-                alert("It's a TIE!");
+                return("It's a TIE!");
         return results
