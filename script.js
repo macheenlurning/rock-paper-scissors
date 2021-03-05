@@ -1,36 +1,52 @@
 function computerPlay() {
-  let x = Math.floor(Math.random() * 3);
-  if (x = 0) {
-    let result = "rock"
-    } else if (x = 1) {
-    let result = "paper" 
-    } else {
-    let result = "scissors" 
+  const cp = (Math.random() * 3);
+  if (cp = 0) {
+    return "rock";
+    } else if (cp = 1) {
+        return "paper"; 
+    } else 
+       return "scissors"
     }
-  return result
-  }
+
+let computerScore = 0
+let playerScore = 0
 
 function playRound(playerSelection, computerSelection) {
-// your code here
-  let playerSelection = lower(prompt("Choose your weapon (Rock, Paper, Scissors): "));
-  let computerSelection = computerPlay() 
-  if (playerSelection = "rock" && computerSelection === "scissors") {
-    return("You WIN! Rock beats Scissors.");
-  } else if (playerSelection === "paper" && computerSelection === "rock") {
-    return("You WIN! Paper beats Rock.");
-  } else if (playerSelection === "scissors" && computerSelection === "paper") {
-    return("You WIN! Scissors beats Paper.");
+  if (playerSelection === "rock" && computerSelection === "scissors") {
+    playerScore++;
+    return "You WIN! Rock beats Scissors. Score: ${playerScore} to ${computerScore}";
   } else if (playerSelection === "rock" && computerSelection === "paper") {
-    return("You LOSE! Paper beats your Rock.");
+    computerScore++;
+    return "You LOSE! Paper beats your Rock. Score: ${playerScore} to ${computerScore}";
+  } else if (playerSelection === "paper" && computerSelection === "rock") {
+    playerScore++;
+    return "You WIN! Paper beats Rock. Score: ${playerScore} to ${computerScore}";
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
-    return("You LOSE! Scissors beats your Paper.");
+    computerScore++;
+    return"You LOSE! Scissors beats your Paper. Score: ${playerScore} to ${computerScore}";
+  } else if (playerSelection === "scissors" && computerSelection === "paper") {
+    playerScore++;
+    return "You WIN! Scissors beats Paper. Score: ${playerScore} to ${computerScore}";
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
-    return("You LOSE! Rock beats your Scissors.");
-  } else (playerSelection === computerSelection)
-    return("It's a TIE!"); 
+    computerScore++;
+    return"You LOSE! Rock beats your Scissors. Score: ${playerScore} to ${computerScore}";
+  } 
+  else return "It's a DRAW! Score: ${playerScore} to ${computerScore}";
 }  
 
-// to test function of playRound()
-let playerSelection = 'rock';
-let computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+  for (let i = 0; i < 5, i++) {
+    let playerSelection = window.prompt("Choose your weapon (Rock, Paper, or Scissors): ", );
+    playerSelection = playerSelection.toLowerCase();
+    const computerSelection = computerPlay()
+    console.log(playRound(playerSelection, computerSelection))
+  }
+  if (playerScore > computerScore) {
+    console.log("Congratulations! You Won the Game! Final Score: ${playerScore} to ${computerScore}");
+  } else if (computerScore > playerScore) {
+    console.log("Sorry, you lose...better luck next time. Final Score: ${playerScore} to ${computerScore}");
+  } else 
+    console.log("You tied. Final Score: ${playerScore} to ${computerScore}");
+}
+
+game();
